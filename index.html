@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlética Overdose — Farmácia</title>
+<meta name="description" content="Atlética Overdose, a atlética do curso de Farmácia. Times, eventos, gestão, loja e comunidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo"><span class="plus">+</span>OD</div>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#eventos">Calendário</a></li>
+      <li><a href="#esportes">Esportes</a></li>
+      <li><a href="#gestao">Gestão</a></li>
+      <li><a href="#titulos">Títulos</a></li>
+      <li><a href="#loja">Loja</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#inscricao" class="nav-cta">Inscreva-se</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <!--<div class="eyebrow">Atlética do curso de Farmácia</div>-->
+    <h1>ATLÉTICA<br><span>OVERDOSE</span></h1>
+    <p class="hero-sub">Overdose de garra pra vencer o intercursos: treino, suor e uma galera que não abre mão de representar a Farmácia — dentro e fora de quadra.</p>
+    <div class="cta-row">
+      <a href="#inscricao" class="btn btn-solid">Quero entrar →</a>
+      <a href="#eventos" class="btn btn-ghost">Ver calendário</a>
+    </div>
+    <div class="tag-row">
+      <span class="tag">⚽ <b>Futsal</b></span>
+      <span class="tag">🏐 <b>Vôlei</b></span>
+      <span class="tag">🏀 <b>Basquete</b></span>
+      <span class="tag">🎉 <b>Eventos</b></span>
+      <span class="tag">500mg de <b>garra</b></span>
+    </div>
+
+    <div class="ekg-wrap" aria-hidden="true">
+      <svg viewBox="0 0 800 110" preserveAspectRatio="none">
+        <path id="ekg-path" d="M0,64 L120,64 L145,64 L160,20 L175,95 L190,64 L215,64 L800,64" />
+        <g id="ekg-cross">
+          <rect x="163" y="4" width="14" height="36" rx="3"></rect>
+          <rect x="151" y="16" width="38" height="14" rx="3"></rect>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-text">
+      <div class="eyebrow">Quem somos</div>
+      <h2 style="font-size:clamp(30px,5vw,44px); margin-bottom:20px;">Farmácia também é rivalidade e união de quadra.</h2>
+      <p>Somos a atlética oficial do curso de Farmácia. Reunimos calouros e veteranos em times de futsal, vôlei, basquete e handebol, além de organizar as festas e eventos que marcam o calendário da faculdade.</p>
+      <p>Este texto é um ponto de partida — troque pela história real de vocês: quando a atlética foi fundada, quais conquistas já teve e o que torna o grupo único. <em>(edite este parágrafo)</em></p>
+    </div>
+    <div class="valores">
+      <div class="valor-card">
+        <div class="valor-num">01</div>
+        <div><h3>Comunidade</h3><p>Bixos e veteranos treinando e comemorando juntos, dentro e fora da faculdade.</p></div>
+      </div>
+      <div class="valor-card">
+        <div class="valor-num">02</div>
+        <div><h3>Competição</h3><p>Representamos a Farmácia nos intercursos com times em várias modalidades.</p></div>
+      </div>
+      <div class="valor-card">
+        <div class="valor-num">03</div>
+        <div><h3>Identidade</h3><p>Camisa, mascote e uma galera que carrega o nome do curso com orgulho.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="eventos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Calendário</div>
+      <h2 style="font-size:clamp(28px,5vw,40px);">Próximos compromissos</h2>
+    </div>
+
+    <div class="rx-panel">
+      <div class="rx-head">
+        <div class="rx-symbol">℞</div>
+        <div class="rx-meta">ATLÉTICA OVERDOSE<br>PRESCRIÇÃO Nº 001</div>
+      </div>
+      <div class="rx-title">Uso semanal — seguir à risca</div>
+
+      <div id="rxItems">
+        <p class="rx-loading">Carregando agenda…</p>
+      </div>
+
+      <div class="rx-foot">
+        <div class="rx-sign">Diretoria Overdose</div>
+        <div>Validade: este semestre</div>
+      </div>
+    </div>
+    <p class="eventos-note">* Datas ilustrativas — substitua pelo calendário real de vocês.</p>
+  </div>
+</section>
+
+<section id="esportes">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Modalidades</div>
+      <h2 style="font-size:clamp(28px,5vw,40px);">Nossos esportes</h2>
+      <p>Escolha uma modalidade e chama pro treino. Edite dias, horários e responsáveis reais aqui.</p>
+    </div>
+    <div class="esportes-grid">
+      <div class="esporte-card">
+        <span class="esporte-icon">⚽</span>
+        <h3>Futsal</h3>
+        <p>Nosso carro-chefe nos intercursos, com times masculino e feminino.</p>
+        <div class="esporte-meta">
+          <span>Treino: <b>Ter e Qui, 19h</b></span>
+          <span>Local: <b>Ginásio central</b></span>
+          <span>Responsável: <b>Nome do responsável</b></span>
+        </div>
+      </div>
+      <div class="esporte-card">
+        <span class="esporte-icon">🏐</span>
+        <h3>Vôlei</h3>
+        <p>Time misto, aberto pra quem nunca jogou e quer aprender.</p>
+        <div class="esporte-meta">
+          <span>Treino: <b>Seg, 18h</b></span>
+          <span>Local: <b>Quadra poliesportiva</b></span>
+          <span>Responsável: <b>Nome do responsável</b></span>
+        </div>
+      </div>
+      <div class="esporte-card">
+        <span class="esporte-icon">🏀</span>
+        <h3>Basquete</h3>
+        <p>Treinos leves com foco em preparar o time pro intercursos.</p>
+        <div class="esporte-meta">
+          <span>Treino: <b>Qua, 20h</b></span>
+          <span>Local: <b>Quadra coberta</b></span>
+          <span>Responsável: <b>Nome do responsável</b></span>
+        </div>
+      </div>
+      <div class="esporte-card">
+        <span class="esporte-icon">🤾</span>
+        <h3>Handebol</h3>
+        <p>Modalidade em crescimento — todo mundo é bem-vindo pra formar o time.</p>
+        <div class="esporte-meta">
+          <span>Treino: <b>Sex, 17h</b></span>
+          <span>Local: <b>Ginásio central</b></span>
+          <span>Responsável: <b>Nome do responsável</b></span>
+        </div>
+      </div>
+      <div class="esporte-card">
+        <span class="esporte-icon">🏃</span>
+        <h3>Atletismo</h3>
+        <p>Corridas e provas de revezamento nos jogos universitários.</p>
+        <div class="esporte-meta">
+          <span>Treino: <b>Sáb, 8h</b></span>
+          <span>Local: <b>Pista do campus</b></span>
+          <span>Responsável: <b>Nome do responsável</b></span>
+        </div>
+      </div>
+      <div class="esporte-card">
+        <span class="esporte-icon">🏓</span>
+        <h3>Tênis de mesa</h3>
+        <p>Modalidade individual, boa pra quem prefere competir sozinho.</p>
+        <div class="esporte-meta">
+          <span>Treino: <b>Qui, 17h</b></span>
+          <span>Local: <b>Sala multiuso</b></span>
+          <span>Responsável: <b>Nome do responsável</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gestao">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Quem nos representa</div>
+      <h2 style="font-size:clamp(28px,5vw,40px);">Gestão</h2>
+      <p>Clique num card pra ir ao Instagram da pessoa. Troque nomes, cargos e links pelos reais.</p>
+    </div>
+    <div class="gestao-grid">
+      <a class="gestao-card" href="#" target="_blank">
+        <div class="gestao-avatar">P</div>
+        <h3>Nome da Presidente</h3>
+        <span class="gestao-cargo">Presidência</span>
+        <span class="gestao-ig">@instagram</span>
+      </a>
+      <a class="gestao-card" href="#" target="_blank">
+        <div class="gestao-avatar">V</div>
+        <h3>Nome do Vice</h3>
+        <span class="gestao-cargo">Vice-presidência</span>
+        <span class="gestao-ig">@instagram</span>
+      </a>
+      <a class="gestao-card" href="#" target="_blank">
+        <div class="gestao-avatar">E</div>
+        <h3>Nome da Diretoria</h3>
+        <span class="gestao-cargo">Diretoria de esportes</span>
+        <span class="gestao-ig">@instagram</span>
+      </a>
+      <a class="gestao-card" href="#" target="_blank">
+        <div class="gestao-avatar">F</div>
+        <h3>Nome da Diretoria</h3>
+        <span class="gestao-cargo">Diretoria financeira</span>
+        <span class="gestao-ig">@instagram</span>
+      </a>
+      <a class="gestao-card" href="#" target="_blank">
+        <div class="gestao-avatar">M</div>
+        <h3>Nome da Diretoria</h3>
+        <span class="gestao-cargo">Marketing</span>
+        <span class="gestao-ig">@instagram</span>
+      </a>
+      <a class="gestao-card" href="#" target="_blank">
+        <div class="gestao-avatar">C</div>
+        <h3>Nome da Diretoria</h3>
+        <span class="gestao-cargo">Comunicação</span>
+        <span class="gestao-ig">@instagram</span>
+      </a>
+      <a class="gestao-card" href="#" target="_blank">
+        <div class="gestao-avatar">T</div>
+        <h3>Nome da Diretoria</h3>
+        <span class="gestao-cargo">Tesouraria</span>
+        <span class="gestao-ig">@instagram</span>
+      </a>
+      <a class="gestao-card" href="#" target="_blank">
+        <div class="gestao-avatar">E</div>
+        <h3>Nome da Diretoria</h3>
+        <span class="gestao-cargo">Eventos</span>
+        <span class="gestao-ig">@instagram</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="titulos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Conquistas</div>
+      <h2 style="font-size:clamp(28px,5vw,40px);">Títulos</h2>
+      <p>Registro das conquistas da atlética. Adicione um card pra cada título ganho.</p>
+    </div>
+    <div class="titulos-grid">
+      <div class="titulo-card">
+        <div class="titulo-year">2024</div>
+        <div><h3>Campeão de Futsal</h3><p>Intercursos da faculdade, categoria masculina</p></div>
+      </div>
+      <div class="titulo-card">
+        <div class="titulo-year">2023</div>
+        <div><h3>Vice-campeão geral</h3><p>Jogos universitários regionais</p></div>
+      </div>
+      <div class="titulo-card">
+        <div class="titulo-year">2023</div>
+        <div><h3>Campeão de Vôlei</h3><p>Copa entre atléticas da saúde</p></div>
+      </div>
+      <div class="titulo-card">
+        <div class="titulo-year">2022</div>
+        <div><h3>Melhor torcida</h3><p>Prêmio de organização das atléticas</p></div>
+      </div>
+      <div class="titulo-card">
+        <div class="titulo-year">2021</div>
+        <div><h3>Fundação da Atlética Overdose</h3><p>Início da nossa história</p></div>
+      </div>
+      <div class="titulo-card">
+        <div class="titulo-year">EM BREVE</div>
+        <div><h3>Seu título aqui</h3><p>Continue conquistando pra preencher esse espaço</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="loja">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Loja</div>
+      <h2 style="font-size:clamp(28px,5vw,40px);">Vista a camisa</h2>
+      <p>Produtos oficiais da atlética. Substitua pelas fotos e preços reais quando fechar com a gráfica.</p>
+    </div>
+    <div class="loja-grid">
+      <div class="produto p1">
+        <div class="produto-img"><span>CAMISA OFICIAL</span></div>
+        <div class="produto-body">
+          <div class="row"><h3>Camisa de jogo</h3><span class="price-tag">R$ 90</span></div>
+          <p>Modelo masculino e feminino, tecido dry-fit.</p>
+        </div>
+      </div>
+      <div class="produto p2">
+        <div class="produto-img"><span>MOLETOM RX</span></div>
+        <div class="produto-body">
+          <div class="row"><h3>Moletom canguru</h3><span class="price-tag">R$ 140</span></div>
+          <p>Edição de inverno, tiragem limitada.</p>
+        </div>
+      </div>
+      <div class="produto p3">
+        <div class="produto-img"><span>BONÉ RX</span></div>
+        <div class="produto-body">
+          <div class="row"><h3>Boné bordado</h3><span class="price-tag">R$ 55</span></div>
+          <p>Ajuste em fivela, bordado 3D.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Galeria</div>
+      <h2 style="font-size:clamp(28px,5vw,40px);">Registros de quadra e festa</h2>
+      <p>Espaço reservado para as fotos reais dos jogos e eventos — troque estes blocos pelas imagens de vocês.</p>
+    </div>
+    <div class="galeria-grid">
+      <div class="galeria-item g1">FOTO 01</div>
+      <div class="galeria-item g2">FOTO 02</div>
+      <div class="galeria-item g3">FOTO 03</div>
+      <div class="galeria-item g4">FOTO 04</div>
+      <div class="galeria-item g5">FOTO 05</div>
+      <div class="galeria-item g6">FOTO 06</div>
+      <div class="galeria-item g7">FOTO 07</div>
+      <div class="galeria-item g8">FOTO 08</div>
+    </div>
+  </div>
+</section>
+
+<section id="inscricao">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Inscrição</div>
+      <h2 style="font-size:clamp(28px,5vw,40px);">Faça parte da RX</h2>
+    </div>
+    <div class="inscricao-box">
+      <form id="inscForm">
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" type="text" required>
+        </div>
+        <div class="field">
+          <label for="periodo">Período / semestre</label>
+          <input id="periodo" name="periodo" type="text" placeholder="Ex: 3º período" required>
+        </div>
+        <div class="field">
+          <label for="whats">WhatsApp</label>
+          <input id="whats" name="whats" type="tel" placeholder="(00) 00000-0000" required>
+        </div>
+        <div class="field">
+          <label for="modalidade">Modalidade de interesse</label>
+          <select id="modalidade" name="modalidade">
+            <option>Futsal</option>
+            <option>Vôlei</option>
+            <option>Basquete</option>
+            <option>Handebol</option>
+            <option>Atletismo</option>
+            <option>Tênis de mesa</option>
+            <option>Só quero ir nas festas 🎉</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-solid" style="border:none; width:100%; justify-content:center; margin-top:6px;">Enviar inscrição</button>
+        <p class="submit-msg" id="submitMsg">Inscrição recebida! Em breve o time entra em contato pelo WhatsApp.</p>
+      </form>
+      <div class="inscricao-info">
+        <h3>Como funciona depois de enviar?</h3>
+        <p>Este formulário é só o layout — para receber as respostas de verdade, conecte a um Google Forms, uma planilha ou um backend simples.</p>
+        <ul>
+          <li>A diretoria entra em contato via WhatsApp</li>
+          <li>Você é adicionado ao grupo da modalidade escolhida</li>
+          <li>Fica por dentro dos próximos treinos e eventos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Contato</div>
+      <h2 style="font-size:clamp(28px,5vw,40px);">Fala com a gente</h2>
+    </div>
+    <div class="contato-row">
+      <a class="contato-card" href="#"><span class="dot"></span>@atleticaoverdose.farmacia — Instagram</a>
+      <a class="contato-card" href="#"><span class="dot"></span>WhatsApp da diretoria</a>
+      <a class="contato-card" href="#"><span class="dot"></span>contato@atleticaoverdose.com.br</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>ATLÉTICA OVERDOSE — Curso de Farmácia</p>
+  <p>© <span id="year"></span> · site feito com Claude</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
