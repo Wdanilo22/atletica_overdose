@@ -1,3 +1,12 @@
+// ====== MODO CLARO / ESCURO ======
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  const next = isLight ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem('overdose-theme', next); } catch (e) { /* localStorage indisponível */ }
+});
+
 // ====== MENU MOBILE ======
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
