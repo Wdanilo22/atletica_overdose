@@ -43,14 +43,8 @@ if (reduceMotion) {
 // ====== AGENDA (Google Sheets) ======
 // Cole aqui o link publicado como CSV (Arquivo > Compartilhar > Publicar na Web > CSV).
 // Enquanto estiver vazio, o site mostra eventos de exemplo.
-const SHEET_CSV_URL = "";
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRdC_ldVDHa3lr2OcIthpbbxI-0a6wbZuJjH_d_zTP6lRWbz_Ax4qJcSWqYIbeG7bUkMJ43ldPuBa5H/pub?gid=0&single=true&output=csv";
 
-const EXEMPLO_EVENTOS = [
-  { item: "Jogo vs. Atlética de Odonto", descricao: "Futsal masculino — quadra do ginásio central", dia: "SÁB", hora: "14H", confirmado: "sim" },
-  { item: "Treino aberto de vôlei", descricao: "Todos os períodos são bem-vindos", dia: "TER", hora: "19H", confirmado: "" },
-  { item: "Festa de integração dos bixos", descricao: "Local a confirmar", dia: "SEX", hora: "22H", confirmado: "" },
-  { item: "Reunião geral da atlética", descricao: "Eleição de novos representantes", dia: "QUA", hora: "20H", confirmado: "" },
-];
 
 // Parser simples de CSV (lida com campos entre aspas contendo vírgula).
 function parseCSV(text) {
@@ -120,21 +114,54 @@ function renderEventos(eventos, aviso) {
 }
 
 async function carregarAgenda() {
-  if (!SHEET_CSV_URL) {
-    renderEventos(EXEMPLO_EVENTOS, "Exibindo agenda de exemplo — conecte a planilha real em SHEET_CSV_URL (js/script.js).");
+  const container = document.getElementById("rxItems");
+
+  if (!container) {
+    console.error("Elemento #rxItems não encontrado no HTML.");
     return;
   }
+
+  container.innerHTML = "<p>Carregando eventos...</p>";
+
   try {
-    const res = await fetch(SHEET_CSV_URL, { cache: "no-store" });
-    if (!res.ok) throw new Error("Falha ao buscar planilha");
-    const text = await res.text();
-    const eventos = csvToEventos(text);
-    if (!eventos.length) throw new Error("Planilha vazia");
+    const res = await fetch(SHEET_CSV_URL, {
+      cache: "no-store"
+    });
+
+    console.log("Status HTTP:", res.status);
+
+    if (!res.ok) {
+      throw new Error(`Erro HTTP: ${res.status}`);
+    }
+
+    const texto = await res.text();
+
+    console.log("CSV recebido:", texto);
+
+    const eventos = csvToEventos(texto);
+
+    console.log("Eventos convertidos:", eventos);
+
+    if (eventos.length === 0) {
+      throw new Error("Nenhum evento foi encontrado no CSV.");
+    }
+
     renderEventos(eventos);
-  } catch (err) {
-    renderEventos(EXEMPLO_EVENTOS, "Não consegui carregar a planilha agora — mostrando agenda de exemplo.");
+
+  } catch (erro) {
+    console.error("Falha ao carregar a agenda:", erro);
+
+    container.innerHTML = "";
+
+    const mensagem = document.createElement("p");
+    mensagem.className = "rx-loading";
+    mensagem.textContent =
+      "Não foi possível carregar os eventos. Consulte o Console.";
+
+    container.appendChild(mensagem);
   }
 }
+
 carregarAgenda();
 
 // ====== FORMULÁRIO DE INSCRIÇÃO (visual, sem backend ainda) ======
